@@ -14,8 +14,16 @@ export default function Tab() {
         screenOptions={{
           headerShown: false,
           tabBarStyle: {
-            backgroundColor: '#8C8B97',
+            backgroundColor: '#38354B',
           },
+          tabBarLabelStyle:{
+              display:'none'
+          },
+          tabBarIconStyle:{
+              color:'#ff0000'
+          },
+          tabBarInactiveTintColor:'#8C8B97',
+          tabBarActiveTintColor:'#E82626'
         }}>
         <Tab.Screen
           options={{
@@ -24,7 +32,7 @@ export default function Tab() {
           name="Home"
           component={Homescreen}
         />
-        <Tab.Screen name="Details" component={MovieDetails} />
+        <Tab.Screen name="Details" component={MovieDetails}  />
         <Tab.Screen name="Explore" component={Homescreen} />
         <Tab.Screen name="User" component={Homescreen} />
       </Tab.Navigator>

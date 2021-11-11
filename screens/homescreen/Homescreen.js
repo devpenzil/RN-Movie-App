@@ -6,8 +6,11 @@ import {originals, ActionMovies, Documentaries, ComedyMovies} from '../../consta
 import { useNavigation } from '@react-navigation/native'
 export default function Homescreen() {
     const navigation = useNavigation()
-    const clicked =  () => {
-       navigation.navigate('Details')
+    const clicked =  (id) => {
+        alert(id)
+       navigation.navigate('Details',{
+           filmid:id
+       })
     }
     return (
         <ScrollView style={styles.container}>

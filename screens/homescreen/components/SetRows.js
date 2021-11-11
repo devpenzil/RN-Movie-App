@@ -19,7 +19,7 @@ export default function  SetRows(props) {
   }
   const render = ({item}) => {
     return(
-      <ImgBasic trigger={props.trigger} url={`${imageUrl}${item.poster_path}`} />
+      <ImgBasic trigger={props.trigger} id={item.id} url={`${imageUrl}${item.poster_path}`} />
     )
   }
   return (

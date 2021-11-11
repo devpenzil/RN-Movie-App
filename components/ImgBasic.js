@@ -3,9 +3,10 @@ import { View, Text, Image, StyleSheet, ImageBackground, TouchableOpacity } from
 
 export default function ImgBasic(props) {
     const image = {uri : props.url}
+    let call = props.trigger
     return (
         <View>
-            <TouchableOpacity onPress={props.trigger}>
+            <TouchableOpacity onPress={()=>call(props.id)}>
             <ImageBackground style={styles.image} resizeMode='cover' source={image} />
             </TouchableOpacity>
         </View>

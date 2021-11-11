@@ -11,11 +11,12 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {API_KEY, imageUrl, Documentaries} from '../../constants/Constants';
-import SetRows from '../homescreen/components/SetRows';
+
 export default function MovieDetails() {
   const movieid = 796499;
   const [data, setData] = useState();
   useEffect(() => {
+
     axios
       .get(
         `https://api.themoviedb.org/3/movie/${movieid}?api_key=${API_KEY}&language=en-US`,
