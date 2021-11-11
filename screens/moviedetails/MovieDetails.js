@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {
   View,
   Text,
@@ -11,12 +11,13 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {API_KEY, imageUrl, Documentaries} from '../../constants/Constants';
-
+import { globalid } from '../../context/context';
 export default function MovieDetails() {
-  const movieid = 796499;
+  const {id} = useContext(globalid)
+  const movieid = id;
   const [data, setData] = useState();
   useEffect(() => {
-
+   
     axios
       .get(
         `https://api.themoviedb.org/3/movie/${movieid}?api_key=${API_KEY}&language=en-US`,
